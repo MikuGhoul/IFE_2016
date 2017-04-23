@@ -1,0 +1,53 @@
+*{
+	margin:0;
+	padding: 0;
+}
+p{
+	line-height: 30px;
+}
+.index{
+	background-color: #eee;
+	border: 2px solid #999;
+	margin: 20px;
+	padding:20px;
+	float: left;
+}
+.left,.center,.right{
+	padding: 20px;
+	background-color: #fff;
+	margin: 10px;
+	border: 2px solid #999;
+}
+.left{
+	width: 200px;
+	float: left;
+}
+.right{
+	/*width: 120px;*/
+	max-width: 120px;
+	float: right;
+}
+.center{
+	/*float: left;
+*/	margin-left: 270px;
+	margin-right: 160px;
+/*	margin-left: 220px;
+	margin-right: 140px;*/
+}
+
+.left img{
+	display: block;
+	float: left;
+	margin-right: 20px;
+}
+.left span{
+	display: block;
+	float: left;
+}
+.right img{
+	/*text-align: center;*/
+	width: 80px;
+	height: 80px;	
+	display: block;
+	margin-bottom: 10px;
+}
