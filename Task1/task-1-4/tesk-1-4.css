@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.index{
+	position: absolute;  
+	/*这里之前如果限定了body的高度，就可以用relative*/
+	/*因为要水平居中，则要top：50%，而不能是一个绝对的像素值*/
+	/*不限定body的高度，这50%就获取不到值*/
+	/*但是这里的50%应该是浏览器窗口，所以body的高度根本无法确定*/
+	/*ps：宽度倒是可以直接100%*/
+	/*所以就不能用relative，而只能用absolute*/
+	/*因为absolu的定位是相对浏览器的*/
+	/*准确点应该是相对与于外层的relative或者absolute*/
+	/*因为这里外层没有relative，就相对于body了*/
+	width: 400px;
+	height: 200px;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -200px;
+	background-color: #ccc;
+}
+.left-circle,.right-circle{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: #fc0;
+}
+.left-circle{
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-bottom-right-radius: 100%;
+}
+.right-circle{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-top-left-radius: 100%;
+}
