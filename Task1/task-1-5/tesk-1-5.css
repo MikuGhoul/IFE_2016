@@ -1,0 +1,162 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #dedede;
+}
+a:hover{
+	color: #a00;
+}
+p{
+	line-height: 30px;
+}
+h1,h2{
+	line-height: 50px;
+}
+h3,h3+p{
+	color: #8f8e8a;
+}
+header{
+	background-color: #333;
+	height: 60px;
+}
+header img{
+	float: left;
+}
+header nav ul{
+	/*margin-top: 10px;*/
+	float: right;
+}
+header nav li{
+	float: left;
+	width: 110px;
+	color: #fff;
+	list-style: none;
+	line-height: 60px;
+}
+header nav li:hover{
+	color: #a00;
+	cursor: pointer;
+}
+header nav li:last-child{
+	color: #aaa;
+}
+article .list li{
+	list-style: none;
+	line-height: 30px;
+}
+.pic div{
+	border:1px solid #000;
+	/*width: 500px;*/
+}
+.pic div p{
+	text-align: center;
+}
+.article div img{
+	/*width: 400px;*/
+	display: block;
+	margin: 10px auto;
+}
+article .rank{
+	margin-left: 50px;
+	font-weight: bold;
+}
+article table{
+	border-collapse:collapse;
+}
+article table{
+	width:100%;
+}
+article table tr th,article table tr td{
+	border:1px solid #ccc;
+	padding: 5px;
+	/*width: 200px;*/
+}
+article table tr:first-child{
+	background-color: #333;
+	color: #fff;
+	text-align: left;
+}
+article table tr:last-child{
+	background-color: #ccc;
+}
+.sidebar h3{
+	border-left: 4px solid #ccc;
+	padding-left: 20px;
+}
+.sidebar form{
+	width: 100%;
+	/*margin: 20px auto;*/
+}
+.sidebar form .type{
+	/*margin:20px auto;*/
+	/*padding-left: 20%;*/
+}
+.sidebar label{
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	text-align:right;
+	width: 120px;
+}
+.sidebar label+input+p{
+	margin-bottom: 30px;
+	padding-left: 140px;
+	color: #aaa;
+}
+.sidebar input[type=submit]{
+	width: 100%;
+	height: 40px;
+	background-color:#20B2AA;
+	color: #fff;
+	border-radius: 10px;
+}
+.sidebar input[type=submit]:hover{
+	background-color: #a00;
+}
+footer{
+	width: 100%;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	line-height: 60px;
+}
+
+/*task-1-5*/
+.sidebar{
+	width: 350px;
+	float: right;
+	margin: 20px;
+	padding: 20px;
+	background-color: #fff;
+}
+.sidebar .type .group{
+	margin-top: 20px;
+}
+.index-box{
+/*	position: absolute;
+	right: 500px;
+	left: 30px;
+	top: 60px;*/
+	margin-right: 450px;
+	margin-top: 22px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	padding: 22px;
+	background-color: #fff;
+	box-shadow: 2px 2px #777;
+}
+/*header{
+	position: absolute;
+}
+footer{
+	position: absolute;
+	bottom: 0;
+}*/
+.pic div{
+	/*float: left;*/
+	height: 150px;
+	width: 150px;
+	display: inline-block;
+}
