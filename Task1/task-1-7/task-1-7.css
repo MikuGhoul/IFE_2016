@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*header*/
+header{
+	height: 56px;
+	background-color: #fff;
+}
+header .icon{
+	float: left;
+	width: 104px;
+	height: 56px;
+	background-image: url(images/icon-1.png);
+	background-repeat: no-repeat;
+	background-position:center left;
+	margin-left: 59px;
+	font-size: 21px;
+	line-height: 56px;
+	text-align: right;
+}
+header .list{
+	float: right;
+	line-height: 56px;
+	margin-right: 40px;
+}
+header .list li{
+	list-style: none;
+	float: left;
+	width: 90px;
+	/*margin-right: 24px;*/
+	color: #8e9197;
+	cursor: pointer;
+	text-align: center;
+}
+header .list li:hover{
+	color:#e74f4d;
+	border-bottom: 3px solid #e74f4d;
+}
+header .login{
+	float: right;
+	width: 47px;
+	margin-right: 67px;
+	background-image: url(images/icon-2.png);
+	background-repeat: no-repeat;
+	background-position: center left;
+	line-height: 56px;
+	color: #e74f4d;
+	text-align: right;
+	cursor: pointer;
+}
+
+/*banner*/
+.banner{
+	position: relative;
+	height: 590px;
+	border-top: 3px solid transparent;
+	background-image: url(images/banner-pic.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.banner .index{
+	position: absolute;
+	top: 170px;
+	left: 117px;
+}
+.banner .title{
+	color:#fff;
+	font-size: 60px;
+}
+.banner .detail{
+	width: 400px;
+	font-size: 25px;
+	color: #fff;
+}
+.banner .button{
+	width: 330px;
+	height: 62px;
+	margin-top: 65px;
+	background-color: #e7504e;
+	color: #fff;
+	text-align: center;
+	line-height: 62px;
+	font-size: 30px;
+	cursor: pointer;
+	transition: background-color 1s;
+}
+.banner .button:hover{
+	background-color: #a00;
+}
