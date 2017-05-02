@@ -88,3 +88,65 @@ header .login{
 .banner .button:hover{
 	background-color: #a00;
 }
+
+/*icon-list*/
+.icon-list{
+	height: 250px;
+	border-top: 1px solid transparent;
+}
+.icon-list ul{
+	position: relative;
+}
+.icon-list li{
+	float: left;
+	width: 25%;
+	list-style: none;
+	text-align: center;
+	transition: color 1s;
+}
+.icon-list li:hover{
+	cursor: pointer;
+	color: #a00;
+}
+.icon-list li img{
+	margin-top: 46px;
+	margin-bottom: 46px;
+}
+.icon-list li p{
+	width: 200px;
+	margin: 0 auto;
+}
+.icon-list li .line1,.icon-list li .line2,.icon-list li .line3{
+	width: 2px;
+	height: 52px;
+	background-color: #ccc;
+	position: absolute;
+}
+.icon-list li .line1{
+	left: 25%;
+	top: 130px;
+}
+.icon-list li .line2{
+	left: 50%;
+	top: 130px;
+}
+.icon-list li .line3{
+	left: 75%;
+	top: 130px;
+}
+
+/*panel*/
+.panel{
+	height: 360px;
+	border-top: 1px solid transparent;
+	background-color: #ededed;
+	text-align: center;
+}
+.panel img{
+	margin-top: 90px;
+	margin-bottom: 50px;
+}
+.panel p{
+	font-size: 60px;
+	color: #a1a1a1;
+}
