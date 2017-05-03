@@ -2,6 +2,9 @@
 	margin: 0;
 	padding: 0;
 }
+body{
+	min-width: 1280px;
+}
 /*header*/
 header{
 	height: 56px;
@@ -149,4 +152,238 @@ header .login{
 .panel p{
 	font-size: 60px;
 	color: #a1a1a1;
+}
+
+/*search*/
+.search{
+	height: 340px;
+	border-top: 1px solid transparent;
+	background-image: url(./images/search-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.search .title{
+	color: #fff;
+	margin-top: 53px;
+	margin-bottom: 10px;
+	font-size: 30px;
+	text-align: center;
+}
+.search .line{
+	height: 3px;
+	width: 40px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+.search .detail{
+	color:#fff;
+	font-size: 15px;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+.search .button{
+	position: relative;
+	width: 1100px;
+	height: 39px;
+	margin: 0 auto;
+	font-size: 12px;
+}
+.search input[type=text]{
+	width: 230px;
+	height: 42px;
+	color:#d9dada;
+	margin-right: 28px;
+	padding-left: 10px;
+	background-image: url(images/icon-4.png);
+	background-repeat: no-repeat;
+	background-position: 90% center;
+	border: none;
+}
+.search ul{
+	position: absolute;
+	left: 271px;
+	list-style: none;
+	border: 1px solid #bf4f49;
+	z-index: 999;
+}
+.search ul li{
+	width: 220px;
+	height: 35px;
+	padding-left: 20px;
+	background-color: #e4e3e5;
+	line-height: 35px;
+	color:#787878;
+}
+.search ul li:hover{
+	background-color: #be4e48;
+	background-image: url(images/icon-3.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	color:#fff;
+}
+.search input[type=button]{
+	width: 236px;
+	height: 40px;
+	background-color: #bf4f49;
+	border: none;
+	color: #fff;
+	transition:background-color 1s;
+}
+.search input[type=button]:hover{
+	background-color: #a00;
+}
+
+/*pic-list*/
+.pic-list{
+	height: 606px;
+	background-color: #f7f7f7;
+	position: relative;
+	text-align: center;
+}
+.pic-list .pic-1,.pic-list .pic-2,.pic-list .pic-3,.pic-list .pic-4{
+	width: 220px;
+	height: 390px;
+/*	position: absolute;
+	top: 102px;
+	left: 148px;
+	text-align: center;*/
+	display: inline-block;
+	margin-top: 102px;
+	margin-right: 36px;
+}
+/*.pic-list .pic-1{
+	left: 148px;
+}
+.pic-list .pic-2{
+	left: 402px;
+}
+.pic-list .pic-3{
+	left: 658px;
+}
+.pic-list .pic-4{
+	left: 915px;
+}*/
+.pic-list .img{
+/*	position: relative;*/
+/*	width: 220px;
+	height: 338px;*/	
+	padding: 14px 8px;
+	border: 2px solid #dcdcdc;
+	background-color: #fff;
+}
+.pic-list .img img{
+	/*display: block;*/
+/*	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;*/
+	/*line-height: 338px;*/
+}
+.pic-list .pic-1 h3,.pic-list .pic-3 h3,.pic-list .pic-4 h3{
+	margin-top: 14px;
+	font-size: 14px;
+	margin-bottom: 11px;
+}
+.pic-list .pic-2 h3{
+	font-size: 24px;
+	letter-spacing: 24px;
+	margin-left: 20px;
+	margin-bottom: 14px;
+}
+.pic-list .pic-2 p{
+	margin-bottom: 11px;
+}
+.pic-list p{
+	color:#bcbdbd;
+}
+
+/*pic-detail*/
+.pic-detail{
+	height: 568px;
+	border-top:1px solid transparent;
+}
+.pic-detail .index{
+	float: left;
+	width: 66%;
+	height: 100%;
+}
+.pic-detail .surface{
+	position: relative;
+	border-top: 1px solid transparent;
+	height: 100%;
+	width: 100%;
+	background-image: url(images/pic-detail-bg.png);
+	background-size: cover;
+	color:#fff;
+	text-align: center;
+	display: inline-block;
+	
+}
+.pic-detail .surface h2{
+	margin-top: 134px;
+	font-size: 50px;
+}
+.pic-detail .surface h1{
+	font-size: 150px;
+}
+.pic-detail .surface h3{
+	font-size:30px;
+}
+.pic-detail .surface p{
+	margin-top: 20px;
+	font-size: 30px;
+}
+.pic-detail .surface:after{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -15px;
+	content: "";
+	width: 0;
+	height: 0;
+/*	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+	border-right: 30px solid #fff;*/
+	border-width: 30px;
+	border-style: solid;
+	border-color: transparent #fff transparent transparent;
+}
+.pic-detail .detail{
+	height: 100%;
+	border-top: 1px solid transparent;
+	text-align: center;
+	margin-left: 66%;
+}
+.pic-detail .detail .title{
+	margin-top: 165px;
+}
+.pic-detail .detail .title span:first-child{
+	font-size: 20px;
+	letter-spacing: 5px;
+}
+.pic-detail .detail .title span:nth-child(2){
+	font-size: 20px;
+	color:#e74f4d;
+}
+.pic-detail .detail p{
+	margin:32px 72px;
+	color:#b0b0b0;
+	line-height: 28px;
+}
+.pic-detail .detail input{
+	margin-top: 20px;
+	color:#e4666a;
+	border: 2px solid #e4666a;
+	width: 105px;
+	height: 33px;
+	background-color: #fff;
+	transition:background-color 1s;
+	transition: color 1s;
+}
+.pic-detail .detail input:hover{
+	background-color: #e4666a;
+	color:#fff;
 }
