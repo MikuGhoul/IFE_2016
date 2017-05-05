@@ -375,6 +375,7 @@ header .login{
 }
 .pic-detail .detail input{
 	margin-top: 20px;
+	margin-bottom: 26px;
 	color:#e4666a;
 	border: 2px solid #e4666a;
 	width: 105px;
@@ -386,4 +387,324 @@ header .login{
 .pic-detail .detail input:hover{
 	background-color: #e4666a;
 	color:#fff;
+}
+.pic-detail .detail .button-list{
+	width: 102px;
+	height: 12px;
+	margin: 0 auto;
+}
+.pic-detail .detail .button-list div{
+	float: left;
+	margin: 0 10px;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #919192;
+	border-radius: 50%;
+}
+.pic-detail .detail .button-list .active{
+	background-color: #919192;
+}
+
+/*list-item*/
+.list-item{
+	height: 521px;
+	border-top: 1px solid transparent;
+}
+.list-item .list-1,.list-item .list-2{
+	text-align: center;
+	float: left;
+	/*border-top: 1px solid transparent*/
+}
+.list-item .list-1{
+	width:33%;
+	height: 100%;
+	background-color: #e74f4d;
+	color:#fff;
+	font-size: 20px;
+}
+.list-item .list-2{
+	width: 33%;
+	height: 100%;
+	background-color: #fff;
+	font-size:20px;
+}
+.list-item p:first-child{
+	margin-top: 174px;
+}
+.list-item p:nth-child(2){
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+.list-item .line{
+	width: 31px;
+	height: 2px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+.list-item .list-2 .line{
+	background-color: #aaa;
+}
+.list-item input[type=button]{
+	margin-top: 25px;
+	width: 170px;
+	height: 43px;
+	border: 1px solid #fff;
+	background-color: transparent;
+	color:#fff;
+	font-size:20px;
+	transition: background-color 1s;
+}
+.list-item .list-2 input[type=button]{
+	border: 1px solid #e74f4d;
+	color:#e74f4d;
+}
+.list-item .list-1 input[type=button]:hover{
+	background-color: #fff;
+	color:#e74f4d;
+}
+.list-item .list-2 input[type=button]:hover{
+	background-color: #e74f4d;
+	color:#fff;
+}
+.list-item .list-3{
+	float: left;
+	height: 100%;
+	background-image: url(images/list-item-pic3.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 34%;
+	position: relative;
+}
+.list-item .list-3:after{
+	content: '';
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	border-left: 30px solid #fff;
+	border-right: 30px solid transparent;
+	border-bottom: 30px solid transparent;
+	border-top: 30px solid transparent;
+}
+
+/*join*/
+.join{
+	height: 749px;
+	border-top: 1px solid transparent;
+}
+.join .title{
+	margin-top: 118px;
+	text-align: center; 
+	font-size:18px;
+}
+.join .title p:first-child{
+	font-size:18px;
+	font-weight: bold;
+	letter-spacing:5px;
+	margin-bottom: 8px;
+}
+.join .title .line{
+	height: 2px;
+	width: 31px;
+	margin: 0 auto;
+	background-color:#e8504e;
+}
+.join .title p:nth-child(3){
+	margin-top: 15px;
+	font-size: 14px;
+	color:#B3AFAC;
+}
+.join .title p:last-child{
+	font-size: 14px;
+	color:#B3AFAC;
+	margin-bottom: 105px;
+}
+.join .index{
+	width: 1090px;
+	margin: 0 auto
+}
+.join .left{
+	width: 320px;
+	float: left;
+	margin-top: 20px;
+	/*margin-left: 137px;*/
+	margin-right: 70px;
+}
+.join .left .list-1{
+	margin-bottom: 38px;
+}
+.join .left .list-2{
+	margin-bottom: 18px;
+}
+.join .left .list-1 p:first-child,.join .left .list-2 p:first-child,.join .left .list-3 p:first-child{
+	font-size: 16px;
+	margin-bottom: 27px;
+}
+.join .left .list-1 p:nth-child(2),.join .left .list-2 p:nth-child(2){
+	font-size: 14px;
+	color:#9d9b9a;
+}
+/*.join .left img,.join .left span{
+	text-align: right;
+}*/
+.join .left .list-1 p:last-child,.join .left .list-2 p:last-child,.join .left .list-3 p:last-child{
+	text-align: right;
+}
+.join .left .list-1 p:last-child span,.join .left .list-2 p:last-child span,.join .left .list-3 p:last-child span{
+	margin-left: 5px;
+	color:#9d9b9a;
+}
+.join .right{
+	width: 700px;
+	float: left;
+	/*margin-right: 137px;*/
+}
+.join .right input[type=text]{
+	margin: 10px;
+	width: 295px;
+	height: 40px;
+	background-color: #ededee;
+	border: 1px solid #ededee;
+	padding-left:15px;
+	transition: background-color 1s;
+	float: left;
+}
+.join .right input[type=text]:hover,.join .right input[type=text]:focus{
+	background-color:#fff;
+}
+.join .right textarea,.join .right input[type=button]{
+	width: 650px;
+	height: 120px;
+	margin: 10px;
+	background-color: #ededee;
+	border: 1px solid #ededee;
+	padding-top: 15px;
+	padding-left: 15px;
+}.join .right textarea{
+	width: 630px;
+}
+.join .right input[type=button]{
+	height: 40px;
+	/*line-height: 40px;*/
+	padding: 0;
+	transition: 
+}
+.join .right textarea:hover{
+	background-color:#fff;
+}
+.join .right input[type=button]:hover{
+	background-color: #e74f4d;
+	color:#fff;
+}
+
+/*contact*/
+.contact{
+	height: 358px;
+	border-top: 1px solid transparent;
+	background-color: #32353e;
+
+}
+.contact .title{
+	margin-top: 90px;
+	text-align: center;
+	color:#fff;
+}
+.contact .title p:first-child{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.contact form{
+	width: 535px;
+	height: 45px;
+	margin: 0 auto;
+	/*border-top: 1px solid transparent;*/
+	margin-top: 30px;
+}
+.contact input[type=text]{
+	float: left;
+	width: 420px;
+	height: 41px;
+	padding-left: 10px;
+	/*margin-top: 30px;*/
+	/*border: 1px solid #32353e;*/
+}
+.contact input[type=button]{
+	float: left;
+	width: 100px;
+	height: 45px;
+	background-color: #6f7178;
+	border: 1px solid #6f7178;
+	transition:background-color 1s;
+	color:#fff;
+}
+.contact input[type=button]:hover{
+	background-color: #5E5E68;
+	border:1px solid #5E5E68;
+}
+.contact .icon{
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 37px;
+}
+.contact .icon div:nth-child(1){
+	background-image: url(images/icon-6.png);
+	width: 24px;
+	height: 25px;
+	float: left;
+	transition: background-size 1s;
+}
+.contact .icon div:nth-child(2){
+	background-image: url(images/icon-7.png);
+	margin-left: 28px;
+	margin-right: 27px;
+	width: 29px;
+	height: 25px;
+	float: left;
+	transition: background-size 1s;
+}
+.contact .icon div:nth-child(3){
+	background-image: url(images/icon-8.png);
+	margin-right: 21px;
+	width: 29px;
+	height: 25px;
+	float: left;
+	transition: background-size 1s;
+}
+.contact .icon div:nth-child(4){
+	background-image: url(images/icon-9.png);
+	width: 24px;
+	height: 25px;
+	float: left;
+	transition: background-size 2s;
+}
+
+.contact .icon div:hover{
+	background-size: 110%;
+}
+
+
+/*footer*/
+footer{
+	height: 58px;
+	background-color: #2f2f38;
+	color:#fff;
+	line-height: 58px;
+	font-size: 12px;
+}
+footer a{
+	text-decoration: none;
+	color:#fff;
+	cursor: pointer;
+}
+footer a:hover{
+	color:#e74f4d;
+}
+footer p:first-child{
+	float: left;
+	margin-left: 100px;
+}
+footer p:last-child{
+	float: right;
+	margin-right: 100px;
 }
