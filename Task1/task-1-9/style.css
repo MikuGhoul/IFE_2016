@@ -118,13 +118,13 @@ header .form input{
 }
 .sidebar .nav .report{
 	width: 215px;
-	height: 190px;
+	height: 198px;
 	background-color: #383d4e;
 	padding-left: 45px;
 	padding-top: 14px;
 }
 .sidebar .nav .report>p:first-child{
-	height: 12px;
+	height: 15px;
 	margin-bottom: 19px;
 	font-size: 12px;
 	background-image: url(images/nav-report.png);
@@ -167,7 +167,7 @@ header .form input{
 .sidebar .nav .file-list .file-name{
 	margin-left: 55px;
 	padding-left: 0px;
-	height: 42px;
+	height: 50px;
 }
 .sidebar .nav .file-list .file-name p{
 	background-repeat: no-repeat;
@@ -182,6 +182,7 @@ header .form input{
 .sidebar .nav .file-list .file-name .file2-2{
 	background-image: url(images/nav-file2-dark.png);
 	color:#6e8096;
+	margin-bottom: 18px;
 }
 .sidebar .nav .file-list div:last-child{
 	color:#6e8095;
@@ -221,4 +222,8 @@ header .form input{
 }
 .sidebar .nav  .account p{
 	background-image: url(images/nav-account.png);
+}
+.sidebar .nav p:hover{
+	color:#45b97c !important;
+	cursor:pointer;
 }
