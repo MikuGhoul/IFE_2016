@@ -1,0 +1,224 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+/*header*/
+header{
+	width: 100%;
+	min-width: 600px;
+	height:56px;
+	background-color: #2189bf;
+}
+header .logo{
+	float: left;
+	width: 36px;
+	height: 36px;
+	margin-left: 50px;
+	margin-top: 10px;
+}
+header .login,header .form{
+	float: right;
+}
+header .login{
+	width: 41px;
+	margin-right: 94px;
+	background-image: url(images/login.png);
+	background-position: left;
+	background-repeat: no-repeat;
+	line-height: 56px;
+	color:#fff;
+	font-size: 12px;
+	text-align: right;
+}
+header .form{
+	margin-top: 14px;
+	margin-right: 21px;
+}
+header .form input{
+	width: 312px;
+	height: 28px;
+	border-radius:14px;
+	border:none;
+	background-image: url(images/search.png);
+	background-repeat: no-repeat;
+	background-position: 17px center;
+}
+
+
+/*container*/
+.container{
+	min-width: 1280px;
+	height: 100%;
+	margin:0 auto;
+}
+.container .sidebar{
+	position:fixed;
+	width: 260px;
+	/*height: 100%;*/
+	top:56px;
+	bottom: 0px;
+	background-color: #2a2e3d;
+}
+.container .sidebar .avatar{
+	margin-top: 18px;
+	/*margin-left: 45px;*/
+	color:#fff;
+	/*line-height: 57px;*/
+	height:57px;
+	width: 100%;
+	background-image: url(images/avatar.png);
+	background-position: 45px center;
+	background-repeat: no-repeat;
+}
+.container .sidebar .avatar p{
+	line-height: 57px;
+	margin-left: 120px;
+}
+.sidebar .focus{
+	margin-top: 24px;
+	margin-bottom: 24px;
+	color:#6a7c90;
+	height: 40px;
+	background-image: url(images/sidebar-line.png);
+	background-repeat: no-repeat;
+	background-position: 117px ;
+	text-align: center;
+}
+.sidebar .focus .left{
+	float: left;
+	margin-left: 63px;
+	transition: color 1s;
+}
+.sidebar .focus .right{
+	float: right;
+	margin-right: 87px;
+	transition: color 1s;
+}
+.sidebar .focus .line{
+	float: left;
+	height: 30px;
+	width: 2px;
+	background-color: #313545;
+	margin: 0 auto;
+}
+.sidebar .focus .left p:first-child,.sidebar .focus .right p:first-child{
+	font-size: 16px;
+}
+.sidebar .focus .left p:last-child,.sidebar .focus .right p:last-child{
+	font-size: 12px;
+}
+.sidebar .focus .left:hover,.sidebar .focus .right:hover{
+	cursor: pointer;
+	color:#fff;
+}
+.sidebar .nav{
+	font-size:12px;
+}
+.sidebar .nav .report{
+	width: 215px;
+	height: 190px;
+	background-color: #383d4e;
+	padding-left: 45px;
+	padding-top: 14px;
+}
+.sidebar .nav .report>p:first-child{
+	height: 12px;
+	margin-bottom: 19px;
+	font-size: 12px;
+	background-image: url(images/nav-report.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 25px;
+	color:#fff;
+	line-height: 14px;
+}
+.sidebar .nav .file-list div{
+	height: 16px;
+	margin-left:24px;
+	margin-bottom: 18px;
+	padding-left: 16px;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+.sidebar .nav .file-list>div:first-child{
+	background-image: url(images/nav-list-dark.png);
+	color:#6e8096;
+}
+.sidebar .nav .file-list .file{
+	background-repeat: no-repeat;
+	background-position: left;
+	margin-bottom: 18px;
+	padding-left: 16px;
+}
+.sidebar .nav .file-list>div:nth-child(2){
+	background-image: url(images/nav-list-light.png);
+	color:#fff;
+	margin-left: 20px;
+	padding-left: 20px;
+}
+.sidebar .nav .file-list .file-1{
+	background-image: url(images/nav-file-dark.png);
+}
+.sidebar .nav .file-list .file-2{
+	background-image: url(images/nav-file-light.png);
+}
+.sidebar .nav .file-list .file-name{
+	margin-left: 55px;
+	padding-left: 0px;
+	height: 42px;
+}
+.sidebar .nav .file-list .file-name p{
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 15px;
+}
+.sidebar .nav .file-list .file-name .file2-1{
+	background-image: url(images/nav-file2-light.png);
+	color:#fff;
+	margin-bottom: 18px;
+} 
+.sidebar .nav .file-list .file-name .file2-2{
+	background-image: url(images/nav-file2-dark.png);
+	color:#6e8096;
+}
+.sidebar .nav .file-list div:last-child{
+	color:#6e8095;
+	background-image: url(images/nav-list-dark.png);
+}
+.sidebar .nav .file-list div:last-child p{
+	background-image: url(images/nav-file-dark.png);
+}
+.sidebar .nav .nav-list{
+	padding-left: 45px;
+	color:#6e8095;
+	margin-top: 36px;
+	/*margin-bottom: 20px;*/
+}
+.sidebar .nav .collect{
+	margin-top: 16px;
+}
+.sidebar .nav .nav-list p{
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 12px;
+	font-size:12px;
+	line-height: 14px;
+}
+.sidebar .nav  .collect p{
+	background-image: url(images/nav-collect.png);
+}
+.sidebar .nav  .share p{
+	background-image: url(images/nav-share.png);
+}
+.sidebar .nav  .pic p{
+	background-image: url(images/nav-collect.png);
+}
+.sidebar .nav  .grow p{
+	background-image: url(images/nav-collect.png);
+}
+.sidebar .nav  .account p{
+	background-image: url(images/nav-account.png);
+}
