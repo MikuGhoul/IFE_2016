@@ -605,7 +605,7 @@ header .form input{
 	/*border-radius:7px;*/
 	/*background-color: #fff;*/
 }
-.index .project-list .title,.index .project-detail .title{
+.index .project-list .title,.index .project-detail .title,.index .calendar .title,.index .trend .title{
 	height: 40px;
 	width: 100%;
 	background-color: #f4f5f6;
@@ -616,10 +616,10 @@ header .form input{
 	border-top-left-radius: 7px;
 	border-top-right-radius: 7px;
 }
-.index .project-list .title p,.index .project-detail .title p{
+.index .project-list .title p,.index .project-detail .title p,.index .calendar .title p,.index .trend .title p{
 	margin-left: 20px;
 }
-.index .project-list .detail,.index .project-detail .index-content{
+.index .project-list .detail,.index .project-detail .index-content,.index .calendar .content-cal,.index .trend .content-trend{
 	border: 1px solid #ced1d4;
 	border-top: none;
 	background-color: #fff;
@@ -736,7 +736,7 @@ header .form input{
 	color:#c3c2c2;
 	font-weight: normal;
 }
-.index .project-detail p{
+.index .project-detail .index-content p{
 	line-height: 25px;
 }
 .index .project-detail .content-title{
@@ -820,3 +820,33 @@ header .form input{
 	cursor: pointer;
 	background-color: #44b39e;
 }
+
+/*index->project-2*/
+
+.index .project-2{
+	width: 100%;
+	height: 355px;
+	margin-top: 8px;
+}
+
+/*.index->calendar*/
+.index .calendar{
+	height: 355px;
+	width: 350px;
+	float: left;
+}
+.index .calendar .content-cal{
+
+}
+
+
+
+/*index->trend*/
+.index .trend{
+	width: 530px;
+	height: 100%;
+	float: left;
+	margin-left: 10px;
+}
+.index .trend .title p{}
+.index .trend .content-trend{}
