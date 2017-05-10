@@ -39,13 +39,15 @@ header .form{
 	margin-right: 21px;
 }
 header .form input{
-	width: 312px;
+	width: 270px;
 	height: 28px;
+	padding-left: 42px;
 	border-radius:14px;
 	border:none;
 	background-image: url(images/search.png);
 	background-repeat: no-repeat;
 	background-position: 17px center;
+	outline: none;
 }
 
 
@@ -283,13 +285,15 @@ header .form input{
 	border: 1px solid #cacbcb;
 	background-image: url(images/search-list-dark.png);
 	background-repeat: no-repeat;
+	outline: none;
+	transition: border 1s;
 }
 .index .content .search-item span{
 	color:#b7b7b7;
 	font-size:12px;
 }
 .index .content .search-item select:hover{
-	border:1px solid #a00;
+	border:1px solid #44b39e;
 	cursor:pointer;
 }
 .index .search-item .search-list{
@@ -396,6 +400,7 @@ header .form input{
 	font-size: 12px;
 	transition: background-color 1s;
 	border-radius:3px;
+	outline: none;
 }
 .index .search-item .button input:hover{
 	background-color:#d93a49;
@@ -586,4 +591,232 @@ header .form input{
 	background-color: #44b39e;
 	width: 120px;
 	cursor: crosshair;
+}
+/*index->project-1*/
+.index .project-1{
+	height: 355px;
+	margin-top: 13px;
+}
+.index .project-list{
+	width: 530px;
+	height: 100%;
+	float: left;
+	/*border: 1px solid #ced1d4;*/
+	/*border-radius:7px;*/
+	/*background-color: #fff;*/
+}
+.index .project-list .title,.index .project-detail .title{
+	height: 40px;
+	width: 100%;
+	background-color: #f4f5f6;
+	color:#aaaaaa;
+	font-size: 12px;
+	line-height: 40px;
+	border: 1px solid #ced1d4;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+}
+.index .project-list .title p,.index .project-detail .title p{
+	margin-left: 20px;
+}
+.index .project-list .detail,.index .project-detail .index-content{
+	border: 1px solid #ced1d4;
+	border-top: none;
+	background-color: #fff;
+	height: 280px;
+	width: calc(100% - 40px);
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	/*padding: 12px 20px;*/
+	padding-top: 12px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 23px;
+}
+.index .project-list .detail .item{
+	width: 100%;
+	height: 26px;
+}
+.index .project-list .detail .item li{
+	list-style: none;
+	float: left;
+	width: 81px;
+	height: 26px;
+	background-color: #ececef;
+	margin-right: 3px;
+	text-align: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	font-size: 12px;
+	line-height: 26px;
+}
+.index .project-list .detail .item li:first-child{
+	background-color: #fff;
+	border-top: 1px solid #cacbcb;
+	border-left: 1px solid #cacbcb;
+	border-right: 1px solid #cacbcb;
+	/*border-radius: 5px;*/
+}
+.index .project-list .detail .item li:hover{
+	cursor: pointer;
+}
+.index .project-list .detail .table{
+	height: 249px;
+	width: 100%;
+	/*background-color: #a00;*/
+	border:1px solid #cacbcb;
+
+}
+.index .project-list .detail table{
+	border-spacing: 0;
+	border-collapse: collapse;
+	margin-top: 28px;
+	margin-left: 36px;
+}
+.index .project-list .detail table td{
+	border: 1px solid #d1d2d2;
+	/*float: left;*/
+	width: 99px;
+	height: 28px;
+	font-size: 12px;
+	line-height: 28px;
+	text-align: center;
+}
+.index .project-list .detail table td:hover{
+	background-color: #f3f5f6;
+}
+
+/*index->project-detail*/
+.index .project-detail{
+	height: 355px;
+	width: 350px;
+	float: left;
+	margin-left: 10px;
+	font-size: 12px;
+}
+/*.index .project-detail .title{
+	height: 40px;
+	width: 100%;
+	background-color: #f4f5f6;
+	color:#aaaaaa;
+	font-size: 12px;
+	line-height: 40px;
+	border: 1px solid #ced1d4;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+}*/
+/*.index .project-detail .title p{
+	margin-left: 20px;
+}*/
+/*.index .project-detail .index-content{
+	border: 1px solid #ced1d4;
+	border-top: none;
+	background-color: #fff;
+	height: 280px;
+	width: calc(100% - 40px);
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	padding-top: 12px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 23px;
+}*/
+.index .project-detail .title{
+	border-bottom: 1px solid transparent;
+}
+.index .project-detail .index-content{
+	padding-top: 16px;
+	padding-left: 34px;
+	padding-right: 0;
+	padding:16px 0 0 34px;
+	width: calc(100% - 34px);
+	height: 300px;
+}
+.index .project-detail h4{
+	color:#c3c2c2;
+	font-weight: normal;
+}
+.index .project-detail p{
+	line-height: 25px;
+}
+.index .project-detail .content-title{
+	width: 95px;
+	height: 42px;
+	margin-left: 15px;
+}
+.index .project-detail .line-1{
+	width: 281px;
+	height: 1px;
+	background-color: #e8e8e8;
+}
+.index .project-detail .price{
+	float: left;
+	height: 44px;
+	width: 95px;
+	margin-left: 15px;
+}
+.index .project-detail .line-2{
+	float: left;
+	width: 1px;
+	height: 43px;
+	background-color: #e8e8e8;
+}
+.index .project-detail .duty{
+	float: left;
+	margin-left: 11px;
+}
+.index .project-detail .line-3{
+	width: 316px;
+	height: 1px;
+	background-color: #e8e8e8;
+	margin-top: 43px;
+}
+.index .project-detail .describe{
+	width: 280px;
+	height: 145px;
+}
+.index .project-detail .line-4{
+	width: 280px;
+	height: 1px;
+	background-color: #e8e8e8;
+}
+.index .project-detail input[type='checkbox']{
+	-webkit-appearance:none;
+	margin-top: 10px;
+	width: 14px;
+	height: 14px;
+	background-color: #d5d5d5;
+}
+.index .project-detail input[type='checkbox']:checked{
+	background-image: url(images/checkbox.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.index .project-detail input[type='checkbox']:focus{
+	outline: none;
+}
+.index .project-detail label{
+	display: inline-block;
+	font-size: 12px;
+	/*line-height: 12px;*/
+	margin-top: 5px;
+	color: #d5d6d5;
+}
+.index .project-detail input[type='button']{
+	float: right;
+	margin-right: 35px;
+	margin-top: 5px;
+	width: 51px;
+	height: 25px;
+	background-color: #388ac1;
+	border: none;
+	color: #fff;
+	font-size: 12px;
+	line-height: 25px;
+	outline: none;
+	transition: background-color 1s;
+}
+.index .project-detail input[type='button']:hover{
+	cursor: pointer;
+	background-color: #44b39e;
 }
