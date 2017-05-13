@@ -1,0 +1,94 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+table{
+	text-align: left;
+	width: 310px;
+	margin: 30px auto;
+}
+th{
+	width: 100px;
+}
+tr:first-child th{
+	background-color: #000 !important;
+	color: #fff !important;
+}
+tr:nth-child(-n+4){
+	color: #f00;
+}
+
+tr:nth-child(odd){
+	background-color: #aaa;
+}
+
+input{
+	display: block;
+	width: 200px;
+	margin: 30px auto;
+	transition: width 1s;
+}
+input:focus{
+	width: 400px;
+}
+
+.banner{
+	width: 554px;
+	height: 747px;
+	margin: 30px auto;
+	position: relative;
+	/*background-image: url(images/1.png);*/
+}
+.banner input{
+	position: absolute;
+	width: 40px;
+	height: 30px;
+	background-color: #c00;
+	opacity: 0.7;
+	-webkit-appearance:none;
+	outline: none;
+}
+.banner input:first-child{
+	bottom: 5px;
+	right: 100px;
+}
+.banner input:nth-child(2){
+	bottom: 5px;
+	right: 50px;
+}
+.banner input:nth-of-type(3){
+	bottom: 5px;
+	right: 0px;
+}
+.banner img{
+	display: none;
+}
+.banner img:first-of-type{
+	display: block;
+}
+
+/*.box:checked ~ .pic{
+	display: none;
+}
+.box-1:checked ~ .pic-1{
+	display: block;
+}
+.box-2:checked ~ .pic-2{
+	display: block;
+}
+.box-3:checked ~ .pic-3{
+	display: block;
+}*/
+
+.banner input[type='checkbox']:first-of-type:checked ~ img:first-of-type{
+	display: block;
+}
+.banner input[type='checkbox']:nth-of-type(2):checked ~ img:nth-of-type(2){
+	display: block;
+}
+.banner input[type='checkbox']:nth-of-type(3):checked ~ img:nth-of-type(3){
+	display: block;
+}
+.banner input[type='checkbox']:checked ~ img{
+	display: none;
+}
