@@ -20,26 +20,31 @@
 	  ["上海", 50],
 	  ["福州", 10],
 	  ["广州", 50],
-	  ["成都", 90],
+	  ["成都", 80],
 	  ["西安", 100]
 	];
-	var $=function(id){
-	  	return document.getElementById(id);
-	};
-	var appendList=function (array,rank){
-		var list=document.createElement("li");
-		list.innerHTML="第"+rank+"名:"+array[0]+","+array[1];
-		var apiList=$("aqi-list");
-		apiList.appendChild(list);
-	};
+
 	(function () {
-	  for (var i=0,rank=0;i<aqiData.length;i++){
-	  	//console.log(aqiData[i][0]);
-	  	if (aqiData[i][1] > 60){
-	  		console.log(aqiData[i]);
-	  		appendList(aqiData[i],++rank);
-	  	}
-	  }
+	  
+		var apiList=document.getElementById("aqi-list");
+
+		var character=["一","二","三"];
+
+		var appendList=function (array,rank){
+			var list=document.createElement("li");
+			list.innerHTML="第"+character[rank]+"名:"+array[0]+","+array[1];
+			apiList.appendChild(list);
+		};
+
+		aqiData.sort(function cmp(a,b){
+			return b[1] - a[1];
+		})
+
+		for (var i=0;i<aqiData.length;i++){
+		  	if (aqiData[i][1] > 60){
+		  		appendList(aqiData[i],i);
+		  	}
+		 }
 
 	})();
 
