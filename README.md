@@ -51,4 +51,8 @@ Task 13
 Task 14
 =======
 比较简单，基本上sort加个if就可以了。
-在[Rank2](https://github.com/jshacker007/ife2016/blob/master/stage2/task14/index2.html)的代码中发现差不多可以一两行就解决，主要是array.filter()/array.sort()/array.forEach()这三个方法及其中的参数。
+在[Rank2](https://github.com/jshacker007/ife2016/blob/master/stage2/task14/index2.html)的代码中发现差不多可以一两行就解决，主要是
+- array.filter()
+- array.sort()
+- array.forEach()
+这三个方法及其中的参数。
