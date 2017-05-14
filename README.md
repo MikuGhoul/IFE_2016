@@ -5,7 +5,6 @@ Task 1-6不知道说什么，居中的那个实现方法比较多，尤其是一
 Task 7
 =====
 常见的产品官网
-![task7](http://7xrp04.com1.z0.glb.clouddn.com/task_1_7_2.jpg)
 整个container加上个min-width就可以不用太考虑适应性的问题了。
 这是[Rank1](https://github.com/chenBuJuan/IFE-FirstStage-Task7)的代码，个人感觉细节做的很好。其中用**纯CSS**做了个轮播图，我在Task 12中使用这个方法却出现了优先级的问题，所以这里我一直有疑问（待解决）。
 
@@ -18,7 +17,6 @@ PS：calc很好用
 Task 9
 =====
 一个常见的后台管理系统的模板吧
-![](http://7xrp04.com1.z0.glb.clouddn.com/task_1_9_2.jpg)
 没什么难度，就是花时间（技艺不精的借口233），其中Table的一些默认属性的坑踩一踩，还有-webkit-appearance这个可能用的比较多。话说这个task的CSS写了1K行，还没学SASS和LESS。
 
 Task 10
