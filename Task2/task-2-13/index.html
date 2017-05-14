@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task-2-13</title>
+</head>
+<body>
+	<label>请输入北京今天的空气质量：<input type="text" name="" id="api-input"></label>
+	<button id="button">确认填写</button>
+
+	<div>您输入的值是：<span id="api-display">尚无录入</span></div>
+
+
+	<script type="text/javascript">
+		(function(){
+			var button=document.getElementById("button");
+			var api_input=document.getElementById("api-input");
+			var api_display=document.getElementById("api-display");
+
+			button.onclick=function(){
+				var inputValue=api_input.value;
+				api_display.firstChild.nodeValue=inputValue;
+			}
+		})();
+	</script>
+</body>
+</html>
