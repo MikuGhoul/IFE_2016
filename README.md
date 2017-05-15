@@ -57,3 +57,19 @@ Task 14
 - array.forEach()
 
 这三个方法及其中的参数。
+
+Task 15
+=======
+也没什么难度，只不过做的时候闭包出现了点问题。
+抽象函数的形式值得学习
+在[Rank10](https://github.com/jshacker007/ife2016/blob/master/stage2/task15/index1.html)的代码中发现了更具兼容的代码
+
+``` JavaScript
+data.push(new Array(
+  str.substring(0,str.indexOf("空气质量")),                             //get the city name
+  parseInt(str.substring(str.indexOf("<b>")+3, str.indexOf("</b>")))    //get the city dqi score
+  ));
+```
+
+我在这里是substr直接按位截取的，坏处都懂。
+
