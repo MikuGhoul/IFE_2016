@@ -13,18 +13,11 @@ var aqiData = {};
  * 然后渲染aqi-list列表，增加新增的数据
  */
 function addAqiData() {
-  var cityStr = document.getElementById("aqi-city-input").value;
-  var aqiStr = document.getElementById("aqi-value-input").value;
-  var reg=/[\u4e00-\u9fa5]+|[a-zA-Z]+/g;
-  var cityReg="";
-  var regArr=cityStr.match(reg);
-  for (index in regArr){
-    cityReg+=regArr[index];
-  }
-  if (cityReg === cityStr){
+  var cityStr = document.getElementById("aqi-city-input").value.trim();
+  var aqiStr = document.getElementById("aqi-value-input").value.trim();
+  var reg=/^[\u4e00-\u9fa5a-zA-Z]+$/g;
+  if (cityStr.match(reg)){
       if (Number.isInteger(Number(aqiStr))){
-        cityStr=cityStr.trim();
-        aqiStr=aqiStr.trim();
         aqiData[cityStr]=Number(aqiStr);
       }else{
         alert("空气质量指数必须为整数！");
@@ -43,9 +36,9 @@ function renderAqiList() {
   /**
    * 获取对象属性的数组
    */
-  var proList=Object.keys(aqiData);
-  for (val in proList){
-    trHTML+="<tr><td>"+proList[val]+"</td><td>"+aqiData[proList[val]]+"</td><td><button id='aqi-del'>删除</button></td></tr>"
+  // console.log(proList);
+  for (proList in aqiData){
+    trHTML+="<tr><td>"+proList+"</td><td>"+aqiData[proList]+"</td><td><button id='aqi-del'>删除</button></td></tr>";
   }
   table.innerHTML=trHTML;
 }
