@@ -50,7 +50,6 @@ function renderAqiList() {
 function addBtnHandle() {
   addAqiData();
   renderAqiList();
-
 }
 
 /**
