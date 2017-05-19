@@ -73,3 +73,17 @@ data.push(new Array(
 
 我在这里是substr直接按位截取的，坏处都懂。
 
+Task 16
+=======
+难度也不大，正则用起来很爽。事件监听的用事件委托，可以解决用js后添加进去的DOM节点选不到的问题
+``` javascript
+var parent=document.getElementById(parentNode);
+parent.addEventListener(type,fun);
+function fun(e){
+  if (e.target.nodeName==="LI"){
+    //do  something
+  }
+}
+```
+正则那里我最开始是```/[\u4e00-\u9fa5]+|[a-zA-Z]+/g```取汉字和字母的每一串，然后聚合为一串再与源字符串比较。
+看了[Rank2](https://github.com/soulclearm/Learn_front_end/blob/dev/public/second/script/task16.js)发现可以直接判断返回的数组或者NULL。它的正则是```/^[\u4e00-\u9fa5a-zA-Z]+$/g```
