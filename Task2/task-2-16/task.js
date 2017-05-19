@@ -15,13 +15,22 @@ var aqiData = {};
 function addAqiData() {
   var cityStr = document.getElementById("aqi-city-input").value;
   var aqiStr = document.getElementById("aqi-value-input").value;
-  if (Number.isInteger(Number(aqiStr))){
-    cityStr=cityStr.trim();
-    aqiStr=aqiStr.trim();
-    aqiData[cityStr]=Number(aqiStr);
+  var reg=/[\u4e00-\u9fa5]+|[a-zA-Z]+/g;
+  var cityReg="";
+  var regArr=cityStr.match(reg);
+  for (index in regArr){
+    cityReg+=regArr[index];
+  }
+  if (cityReg === cityStr){
+      if (Number.isInteger(Number(aqiStr))){
+        cityStr=cityStr.trim();
+        aqiStr=aqiStr.trim();
+        aqiData[cityStr]=Number(aqiStr);
+      }else{
+        alert("空气质量指数必须为整数！");
+      }
   }else{
-    alert("空气质量指数必须为整数！");
-   
+    alert("城市名必须为中英文字符！");
   }
 }
 
