@@ -55,7 +55,7 @@ var pageState = {
  * 渲染图表
  */
 function renderChart() {
-console.log("fuck");
+console.log(chartData);
 }
 
 /**
@@ -124,14 +124,61 @@ function initCitySelector() {
  */
 function initAqiChartData() {
   // 将原始的源数据处理成图表需要的数据格式
+  // console.log(aqiSourceData);
+  chartData.day=aqiSourceData;
+  chartData.week={};
+  chartData.month={};
+  //console.log(chartData);
+  var monthOneDay=0,monthTwoDay=0,monthThreeDay=0;
+  for (var i in aqiSourceData['北京']){
+    var aqiMonth=i.slice(6,7);
+    switch (aqiMonth){
+      case '1':monthOneDay++;break;
+      case '2':monthTwoDay++;break;
+      case '3':monthThreeDay++;break;
+    }
+  }
+  for (var i in aqiSourceData){  // i : '北京','上海' ...
+    var tallyMonth=0;
+    var tallyWeek=0;
+    var sumMonthAqi=0;
+    var sumWeekAqi=0;
+    chartData.month[i]={};
+    chartData.week[i]={};
+    var countWeek=1;
+    for (var j in aqiSourceData[i]){  // j : '2016-1-1','2016-1-2' ....
+      //charDataMonth
+      sumMonthAqi+=aqiSourceData[i][j];tallyMonth++;
+      if (tallyMonth == monthOneDay && j.slice(6,7) == '1'){
+        chartData.month[i][j.slice(0,7)]=Math.ceil(sumMonthAqi/monthOneDay);
+        sumMonthAqi=0;tallyMonth=0;
+      } else if (tallyMonth == monthTwoDay && j.slice(6,7) == '2'){
+        chartData.month[i][j.slice(0,7)]=Math.ceil(sumMonthAqi/monthTwoDay);
+        sumMonthAqi=0;tallyMonth=0;
+      } else  if (tallyMonth == monthThreeDay && j.slice(6,7) == '3'){
+        chartData.month[i][j.slice(0,7)]=Math.ceil(sumMonthAqi/monthThreeDay);
+        sumMonthAqi=0;tallyMonth=0;
+      }
+      //charDataWeek
+      sumWeekAqi+=aqiSourceData[i][j];tallyWeek++;
+      if (tallyWeek <7 && (tallyMonth == monthOneDay || tallyMonth == monthTwoDay || tallyMonth == monthThreeDay)){
+        chartData.week[i][j.slice(0,7)+"/"+countWeek++]=Math.ceil(sumWeekAqi/tallyWeek);
+      } else  if (tallyWeek == 7){
+        chartData.week[i][j.slice(0,7)+"/"+countWeek++]=Math.ceil(sumWeekAqi/tallyWeek);
+        sumWeekAqi=0;tallyWeek=0;
+      }
+
+    }
+  }
   // 处理好的数据存到 chartData 中
+  
 }
 
 /**
  * 初始化函数
  */
 function init() {
-  initGraTimeForm()
+  initGraTimeForm();
   initCitySelector();
   initAqiChartData();
 }
