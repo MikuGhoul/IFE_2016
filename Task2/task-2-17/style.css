@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+fieldset{
+    width: 50%;
+    margin: 30px auto;
+    height: 60px;
+    border-color: #d9d6c3;
+    /*border-radius: 15px;*/
+    box-shadow: 3px 3px #aaa;
+    padding-left: 30px; 
+}
+fieldset legend{
+    color: #8a8c8e;
+    font-size: 20px;
+}
+fieldset select{
+    width: 100px;
+    height: 25px;
+}
+
+.aqi-chart-wrap{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 80%;
+    height: 530px;
+    margin: 20px auto;
+    border: 1px solid #aaa;
+    box-shadow: 3px 3px 10px #aaa;
+}
+.aqi-chart-wrap div{
+    height: 240px;
+    transition: height 2s ;
+}
+.aqi-chart-wrap div:hover{
+    height: 40px;
+}

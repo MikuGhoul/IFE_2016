@@ -47,7 +47,7 @@ var chartData = {};
 
 // 记录当前页面的表单选项
 var pageState = {
-  nowSelectCity: -1,
+  nowSelectCity: 0,
   nowGraTime: "day"
 }
 
@@ -55,7 +55,41 @@ var pageState = {
  * 渲染图表
  */
 function renderChart() {
-console.log(chartData);
+  
+  var graTimeNow=chartData[pageState.nowGraTime];
+  var selectCityNow=Object.keys(aqiSourceData)[pageState.nowSelectCity];
+
+  var nowData=graTimeNow[selectCityNow];
+  var colHeight=[];
+  var tally=0;
+  for (var i in nowData){
+    colHeight[tally++]=nowData[i];
+  }
+  var colLength=Object.keys(nowData).length;
+  var colWidth;
+  if (colLength ==3 ){
+    colWidth="200px";
+  } else if (colLength == 15){
+    colWidth="30px"
+  } else {
+    colWidth="5px";
+  }
+  var wrapHTML="";
+  for (var i=0;i<colLength;i++){
+    wrapHTML+="<div></div>"
+  }
+  var bgColor=["#00ae9d","#009ad6","#999d9c","#f05b72","#b2d235","#bb505d","#ffd400","#77787b","#1d1626"];
+
+  var chartWarp=document.getElementById("chart-wrap");
+  chartWarp.innerHTML=wrapHTML;
+  var itemCol=chartWarp.getElementsByTagName("div");
+  for (var i=0;i<itemCol.length;i++){
+    itemCol[i].style.height=colHeight[i];
+    itemCol[i].style.width=colWidth;
+    itemCol[i].style.backgroundColor=bgColor[Math.floor(Math.random()*bgColor.length)];
+    itemCol[i].style.transition="height 2s";
+    itemCol[i].setAttribute("title","AQI:"+colHeight[i]);
+  }
 }
 
 /**
