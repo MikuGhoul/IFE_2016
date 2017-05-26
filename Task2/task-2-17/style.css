@@ -33,9 +33,7 @@ fieldset select{
     box-shadow: 3px 3px 10px #aaa;
 }
 .aqi-chart-wrap div{
-    height: 240px;
+   
     transition: height 2s ;
 }
-.aqi-chart-wrap div:hover{
-    height: 40px;
-}
+
