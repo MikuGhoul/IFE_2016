@@ -2,3 +2,23 @@
     margin: 0;
     padding:0;
 }
+body{
+    width: 960px;
+    margin: 40px auto;
+}
+.handle{
+    margin-bottom: 20px;
+}
+.queue{
+    height: 50px;
+}
+.queue div{
+    float: left;
+    background-color: #a00;
+    margin-right: 4px;
+    padding: 5px;
+    color: #fff;
+}
+.queue div:hover{
+    cursor:pointer;
+}
