@@ -87,7 +87,7 @@ function renderChart() {
     itemCol[i].style.height=colHeight[i];
     itemCol[i].style.width=colWidth;
     itemCol[i].style.backgroundColor=bgColor[Math.floor(Math.random()*bgColor.length)];
-    itemCol[i].style.transition="height 2s";
+    itemCol[i].style.transition="height 2s";   // 为啥动画没效果
     itemCol[i].setAttribute("title","AQI:"+colHeight[i]);
   }
 }
