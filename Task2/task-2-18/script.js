@@ -2,6 +2,8 @@
 function getNewDiv(){
     var number=document.getElementById("number");
     var newDiv=document.createElement("div");
+    if (!number.value.match(/\d+/i))
+        return false;
     newDiv.innerText=number.value;
     return newDiv;
 }
@@ -13,6 +15,10 @@ function displayDeleteNum(deletDiv){
 }
 function leftInput(){
     var newDiv=getNewDiv();
+    if (!newDiv){
+        alert("输入非法");
+        return false;
+    }
     var queue=document.getElementById("queue");
     var firstDiv=queue.getElementsByTagName("div")[0];
     if (firstDiv){
@@ -23,6 +29,10 @@ function leftInput(){
 }
 function rightInput(){
     var newDiv=getNewDiv();
+    if (!newDiv){
+        alert("输入非法！");
+        return false;
+    }
     var queue=document.getElementById("queue");
     queue.appendChild(newDiv);
 }
