@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body .handle,body delet{
+    width: 960px;
+    margin: 40px auto;
+}
+.handle{
+    margin-bottom: 20px;
+}
+.queue{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content:space-around;
+    height: 150px;
+    background-color: #aaa;
+}
+.queue div{
+    /*float: left;*/
+    background-color: #a00;
+    margin-right: 4px;
+    padding: 5px;
+    color: #fff;
+    width: 70px;
+}
+.queue div:hover{
+    cursor:pointer;
+}
+.delet{
+    display: none;
+}

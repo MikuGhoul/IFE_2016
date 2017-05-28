@@ -3,20 +3,34 @@ function getNewDiv(){
     var number=document.getElementById("number");
     var newDiv=document.createElement("div");
     if (!number.value.match(/^\d+$/i))
-        return false;
-    newDiv.innerText=number.value;
+        return -1;
+    if (number.value>100 || number.value < 10)
+        return -1;
+    var divQueue=document.getElementById("queue").getElementsByTagName("div");
+    if(divQueue.length+1 > 60){
+        //alert("队列元素不可超过60个！");
+        return 0;
+    }
+    newDiv.style.height=number.value+"px";
+    newDiv.setAttribute("value",number.value);
+    //newDiv.innerText=number.value;
+
+    //newDiv.style.width=(100-(divQueue.length+1)/100)+"%";
     return newDiv;
 }
 function displayDeleteNum(deletDiv){
     var displayDiv=document.getElementById("delet");
-    displayDiv.innerText=deletDiv.innerText;
+    displayDiv.innerText=deletDiv.getAttribute("value");
     var displayDelete=document.getElementById("displayDelet");
     displayDelete.style.display="block";
 }
 function leftInput(){
     var newDiv=getNewDiv();
-    if (!newDiv){
-        alert("输入非法");
+    if (newDiv == -1){
+        alert("输入非法！请输入10-100之间的数字");
+        return false;
+    } else if (newDiv == 0){
+        alert("队列元素不可超过60个！");
         return false;
     }
     var queue=document.getElementById("queue");
@@ -29,8 +43,11 @@ function leftInput(){
 }
 function rightInput(){
     var newDiv=getNewDiv();
-    if (!newDiv){
-        alert("输入非法！");
+    if (newDiv == -1){
+        alert("输入非法！请输入10-100之间的数字");
+        return false;
+    } else if (newDiv == 0){
+        alert("队列元素不可超过60个！");
         return false;
     }
     var queue=document.getElementById("queue");
