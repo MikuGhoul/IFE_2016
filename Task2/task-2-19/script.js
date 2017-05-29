@@ -72,6 +72,25 @@ function rightOutput(){
         queue.removeChild(lastDiv);
     }
 }
+function queueSort(){
+    var divList=document.getElementById("queue").getElementsByTagName("div");
+    var heightList=[];
+    for (var i=0;i<divList.length;i++){
+        heightList[i]=divList[i].getAttribute("value");
+    }
+    for (var i=0;i<heightList.length;i++){
+        for (var j=i+1;j<heightList.length;j++){
+            if (heightList[i]>heightList[j]){
+                var temp=heightList[i];
+                heightList[i]=heightList[j];
+                heightList[j]=temp;
+            }
+        }
+    }
+    for (var i=0;i<divList.length;i++){
+        divList[i].style.height=heightList[i]+"px";
+    }
+}
 function init(){
     var handleBox=document.getElementById("handle");
     handleBox.addEventListener("click",function(e){
@@ -84,6 +103,8 @@ function init(){
                 leftOutput();break;
             case "右输出":
                 rightOutput();break;
+            case "排序":
+                queueSort();break;
         }
     });
     var queueBox=document.getElementById("queue");
