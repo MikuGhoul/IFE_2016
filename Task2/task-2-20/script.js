@@ -1,17 +1,24 @@
 
 function judgeString(){
     var numberString=document.getElementById("number").value;
-    console.log(numberString);
-    console.log(numberString.replace(/,/g,"、"));
+    // console.log(numberString);
+    var numberStr=numberString.replace(/\n|,|，|、| |   | /g," ");
+
+    var numberArr=numberStr.split(" ");
+    if (numberArr[0]==""){    //输入换行再输入数字的情况
+        numberArr.splice(0,1);
+    }
+    if (numberArr[numberArr.length-1]==""){
+        numberArr.splice(numberArr.length-1,1);
+    }
+    return numberArr;
 }
 
-function getNewDiv(){
-    judgeString();
-    var number=document.getElementById("number");
+function getNewDiv(num){
     var newDiv=document.createElement("div");
-    if (!number.value.match(/^\d+$/i))
-        return false;
-    newDiv.innerText=number.value;
+    // if (!num.match(/^\d+$/i))
+    //     return false;
+    newDiv.innerText=num;
     return newDiv;
 }
 function displayDeleteNum(deletDiv){
@@ -21,28 +28,34 @@ function displayDeleteNum(deletDiv){
     displayDelete.style.display="block";
 }
 function leftInput(){
-    var newDiv=getNewDiv();
-    if (!newDiv){
-        alert("输入非法");
-        return false;
-    }
-    var queue=document.getElementById("queue");
-    var firstDiv=queue.getElementsByTagName("div")[0];
-    if (firstDiv){
-        queue.insertBefore(newDiv,firstDiv);
-    } else {
-        rightInput();
+    var numberArr=judgeString();
+    for (var i=0;i<numberArr.length;i++){
+        var newDiv=getNewDiv(numberArr[i]);
+        if (!newDiv){
+            alert("输入非法");
+            return false;
+        }
+        var queue=document.getElementById("queue");
+        var firstDiv=queue.getElementsByTagName("div")[0];
+        if (firstDiv){
+            queue.insertBefore(newDiv,firstDiv);
+        } else {
+            queue.appendChild(newDiv);
+        }
     }
 }
 function rightInput(){
-    var newDiv=getNewDiv();
-    if (!newDiv){
-        alert("输入非法！");
-        return false;
+    var numberArr=judgeString();
+    for (var i in numberArr){
+        var newDiv=getNewDiv(numberArr[i]);
+        if (!newDiv){
+            alert("输入非法！");
+            return false;
+        }
+        var queue=document.getElementById("queue");
+        queue.appendChild(newDiv);
     }
-    var queue=document.getElementById("queue");
-    queue.appendChild(newDiv);
-}
+}   
 
 function leftOutput(){
     var queue=document.getElementById("queue");
