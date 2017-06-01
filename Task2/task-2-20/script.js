@@ -61,7 +61,6 @@ function leftOutput(){
     var queue=document.getElementById("queue");
     var firstDiv=queue.getElementsByTagName("div")[0];
     if (firstDiv){
-        
         displayDeleteNum(firstDiv);
         queue.removeChild(firstDiv);
     }
@@ -73,6 +72,18 @@ function rightOutput(){
         var lastDiv=divList[divList.length-1];
         displayDeleteNum(lastDiv);
         queue.removeChild(lastDiv);
+    }
+}
+function searchHandle(){
+    var searchWord=document.getElementById("search").value;
+    var reg=new RegExp(searchWord,"gi");
+    var divList=document.getElementById("queue").getElementsByTagName("div");
+    for (var i=0;i<divList.length;i++){
+        var divText=divList[i].innerText;
+        console.log(divText.match(reg));
+        if (divText.match(reg)){
+            divText.replace(reg,"fuck");
+        }
     }
 }
 function init(){
@@ -87,6 +98,8 @@ function init(){
                 leftOutput();break;
             case "右输出":
                 rightOutput();break;
+            case "查询":
+                searchHandle();break;
         }
     });
     var queueBox=document.getElementById("queue");
