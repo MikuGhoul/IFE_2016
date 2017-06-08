@@ -80,9 +80,12 @@ function searchHandle(){
     var divList=document.getElementById("queue").getElementsByTagName("div");
     for (var i=0;i<divList.length;i++){
         var divText=divList[i].innerText;
-        console.log(divText.match(reg));
         if (divText.match(reg)){
-            divText.replace(reg,"fuck");
+            var returnText="<span>"+divText.match(reg)[0]+"</span>"
+            divList[i].innerHTML=divText.replace(reg,returnText);
+        } else {
+            // 删除span标签
+            divList[i].innerHTML=divList[i].innerText
         }
     }
 }

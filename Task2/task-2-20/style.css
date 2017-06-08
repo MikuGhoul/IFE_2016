@@ -29,3 +29,6 @@ textarea{
 button{
     margin-right: 30px;
 }
+.queue div span{
+    background-color: #45b97c;
+}
